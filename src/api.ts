@@ -1,7 +1,7 @@
 import { newData } from './interface'
 
 export const fetchProducts = async () => {
-    const res = await fetch('http://localhost:3000/products')
+    const res = await fetch('https://nice-long-underwear-goat.cyclic.app/products')
     if (!res.ok) {
         throw new Error(`${res.status} ${res.statusText}`)
     }
@@ -10,7 +10,7 @@ export const fetchProducts = async () => {
 }
 
 export const post = async (person: newData) => {
-    const res = await fetch('http://localhost:3000/orders', {
+    const res = await fetch('https://nice-long-underwear-goat.cyclic.app/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
